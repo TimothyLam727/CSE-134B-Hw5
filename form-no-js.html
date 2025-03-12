@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="src/styles/form-no-js.css">
+    <script src="src/scripts/hello-world.js"></script>
+    <script src="https://kit.fontawesome.com/306a08d434.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <div class="dropdown">
+            <button class="dropbtn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="#home">Home</a>
+                <a href="#about-me">About Me</a>
+                <a href="#experience">Experience</a>
+                <a href="#projects-section">Projects</a>
+                <section id="contact">
+                    <p>Connect with me!</p>
+                    <div class="social-links">
+                        <a href="https://github.com/timothy0727" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-brands fa-github fa-bounce slow-bounce"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/wai-taing-lam-417a43227/" target="_blank"
+                            rel="noopener noreferrer">
+                            <i class="fa-brands fa-linkedin fa-bounce slow-bounce"></i>
+                        </a>
+                        <a href="https://www.instagram.com/tim_tim_0727" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-brands fa-instagram fa-bounce slow-bounce"></i>
+                        </a>
+                        <a href="mailto:timlam727@gmail.com" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-solid fa-envelope fa-bounce slow-bounce"></i>
+                        </a>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </header>
+    <main>
+        <home-section id="home">
+            <section id="home-main-content">
+                <picture>
+                    <source srcset="src/img/image_2-min.avif" type="image/avif">
+                    <source srcset="src/img/image_2-min.webp" type="image/webp">
+                    <img src="src/img/image_2-min.jpeg" srcset="src/img/image_2-min-800w.jpeg 800w, 
+                                 src/img/image_2-min-1200w.jpeg 1200w, 
+                                 src/img/image_2-min-1600w.jpeg 1600w" sizes="(max-width: 600px) 800px, 
+                                (max-width: 1200px) 1200px, 
+                                1600px"
+                        alt="Timothy Lam, a Computer Science student at UC San Diego, smiling at a scenic outdoor location."
+                        loading="lazy" style="height: 400px; width: auto; object-fit: cover; object-position: center;">
+                </picture>
+
+                <hgroup>
+                    <h1>Hello, I am Timothy Lam!</h1>
+                    <p>I am a student, computer enthusiast, and a debugger of my life.</p>
+                </hgroup>
+            </section>
+            <blockquote>
+                "Be the Best of yourself, today and the days after when facing any problem."
+            </blockquote>
+        </home-section>
+
+        <about-me id="about-me">
+            <h2>About Me</h2>
+            <div class="about-me-content">
+                <figure>
+                    <picture>
+                        <source srcset="src/img/image_1-min.avif" type="image/avif">
+                        <source srcset="src/img/image_1-min.webp" type="image/webp">
+                        <img src="src/img/image_1-min.jpeg" srcset="src/img/image_1-min-300w.jpeg 300w, 
+                                     src/img/image_1-min-600w.jpeg 600w, 
+                                     src/img/image_1-min-1200w.jpeg 1200w" sizes="(max-width: 600px) 300px, 
+                                    (max-width: 1200px) 600px, 
+                                    1200px"
+                            alt="A smiling Timothy Lam, a Computer Science student at UC San Diego, standing in front of a scenic background."
+                            loading="lazy"
+                            style="height: auto; width: 300px; object-fit: cover; object-position: center;">
+                    </picture>
+                    <figcaption>This is me!</figcaption>
+                </figure>
+
+                <section>
+                    <p>My name is Wai Taing Lam, Timothy. I am a senior at UC San Diego majoring in Computer Science,
+                        where I spend most of my time either coding, degbugging, or wondering why my code isn't working.
+                        My interests lie in machine learning and data analysis.</p>
+                    <p>Previuosly, I worked at MTR Hong Kong, where I developed an automated database system for
+                        analyzing overhad-line Smart maintenance data. I streamlined data processing workflows, making
+                        analysis faster and more efficient while helping engineer make informed decisions. I can now
+                        claim I helped keep trains running smoothly -- probably the coolest things to put on my resume.
+                    </p>
+                    <p>Beyond coding, I'm a huge soccer fan (diehard <a
+                            href="https://www.tottenhamhotspur.com/fixtures/men/" class="spurs-link"><strong>Tottenham
+                                Hotspurs</strong></a> fan despite they suck), a gym-goer who skip leg day, and a music
+                        lover who
+                        has a really bad <a
+                            href="https://open.spotify.com/playlist/0o1ZonwOTZNpVei75t9y7l?si=bb353add0f264409"
+                            class="spotify-link"><strong>Spotify
+                                playlist</strong></a>. When I am not coding, I am probably learning something new, or
+                        sleeping -- mostly sleeping.</p>
+                </section>
+            </div>
+        </about-me>
+
+        <experience-section id="experience">
+            <h2>Experience</h2>
+            <!--Content for Study History-->
+            <section id="study-experience">
+                <h3>Study</h3>
+                <article class="study ucsd">
+                    <article class="format">
+                        <article class="left">
+                            <h4>University of California, San Diego, La Jolla, CA</h4>
+                            <p>Bachelor of Science in Computer Science</p>
+                        </article>
+                        <article class="right">
+                            <p>Expected Graduation: DEC 2025</p>
+                            <p>GPA: 3.79</p>
+                        </article>
+                    </article>
+                </article>
+
+                <article class="study foothill">
+                    <article class="format">
+                        <article class="left">
+                            <h4>Foothill College, Palo Alto, CA</h4>
+                            <p>Associate in Science for Transfer, Computer Science</p>
+                        </article>
+                        <article class="right">
+                            <p>SEP 2021 - JUN 2023</p>
+                            <p>GPA: 3.83</p>
+                        </article>
+                    </article>
+                </article>
+            </section>
+
+            <br>
+
+            <!--Content for Work History-->
+            <section id="work-experience">
+                <h3>Work History</h3>
+                <article id="mtr" class="work">
+                    <article class="format">
+                        <article class="left">
+                            <h4>MTR, Hong Kong</h4>
+                            <p>Smart Maintenance Data Analyst Intern</p>
+                        </article>
+                        <p class="right">JUL 24 - AUG 24</p>
+                    </article>
+                    <ul class="responsibilities">
+                        <li>Perform data entry and preliminary analysis on overhead-line Smart maintenance data,
+                            ensuring accurate and up-to-date
+                            records.</li>
+                        <li>Develop and implement an automated database system to streamline data analysis
+                            processes, enhancing efficiency and
+                            reducing manual errors.</li>
+                        <li>Utilize data analysis tools and software to identify patterns and generate reports
+                            supporting informed decision-making.</li>
+                    </ul>
+                </article>
+
+                <article id="pass-the-torch" class="work">
+                    <div class="format">
+                        <div class="left">
+                            <h4>Pass the Torch, Foothill College, CA</h4>
+                            <p>Instructional Assistant</p>
+                        </div>
+                        <p class="right">MAY 22 - MAR 23</p>
+                    </div>
+
+
+                    <ul class="responsibilities">
+                        <li>Acted as a team leader and committed to weekly meetings with assigned study teams.</li>
+                        <li>Planned and executed weekly study sessions, utilizing interactive learning techniques to
+                            engage team members and enhance understanding of complex Calculus concepts.</li>
+                        <li>Implemented innovative teaching strategies and individualized study plans to facilitate
+                            peer-to-peer knowledge sharing, resulting in a 15% increase in average test scores and final
+                            grades.</li>
+                    </ul>
+                </article>
+            </section>
+
+            <br>
+
+            <!--Content for Leadership Roles-->
+            <section id="leadership-roles">
+                <h3>Leadership Roles</h3>
+                <article id="hksa" class="work">
+                    <article class="format">
+                        <article class="left">
+                            <h4>Hong Kong Student Association, Foothill College, CA</h4>
+                            <p>Founder & President</p>
+                        </article>
+                        <p class="right">SEP 22 - JUN 23</p>
+                    </article>
+
+
+                    <ul class="responsibilities">
+                        <li>Created an open platform for Hong Kong students and those who are interested in Cantonese
+                            culture.</li>
+                        <li>Aimed to celebrate and promote Cantonese culture to different communities.</li>
+                    </ul>
+                </article>
+            </section>
+
+
+            <!--Content for Skills-->
+            <section id="skills">
+                <h3>Skills</h3>
+                <section>
+                    <p><b><u>Programming</u></b>: <i>C++, Java, Python, SQL, C, MATLAB, HTML, JavaScript, Git, Linux</i>
+                    </p>
+                    <p><b><u>Soft Skills</u></b>: <em>Communication, Problem Solving, Teamwork, Time Management,
+                            Passion to Learn</em></p>
+                </section>
+            </section>
+
+        </experience-section>
+
+
+        <projects-section id="projects-section">
+            <h2>Projects</h2>
+            <section id="projects">
+                <section id="codelog">
+                    <article>
+                        <a href="https://timothy0727.github.io/Codelog/home_projects_page.html">CodeLog</a>
+                        <p>2024 | <code>HTML CSS JS</code></p>
+                    </article>
+                    <ul>
+                        <li>Collaborated with a team of 10 to design and implement a portfolio web app for coders to
+                            showcase their personal projects and for recruiters to understand these projects quickly and
+                            efficiently.</li>
+                        <li>A user-friendly journal application tailored for software developers enables code
+                            documentation
+                            and tracking, enhancing coding efficiency and maintenance.</li>
+                    </ul>
+                </section>
+
+                <section id="tswift">
+                    <article>
+                        <a>tswift</a>
+                        <p>2023 | <code>Python</code></p>
+                    </article>
+                    <ul>
+                        <li>A search engine for Taylor Swift’s songs using Python Numpy and BabyPandas.</li>
+                        <li>Users can search the songs based on the song title or song lyrics.</li>
+                        <li>Engineered a recommendation algorithm leveraging a machine learning model that analyzed user
+                            preferences to curate personalized playlists.</li>
+                    </ul>
+                </section>
+
+                <section id="striker">
+                    <article>
+                        <a>Goals & Gold: The Impact of Fame on Striker Salaries</a>
+                        <p>2024 | <code>Python</code></p>
+                    </article>
+                    <ul>
+                        <li>Conducted a statistical analysis on the relationship between strikers salaries, performance,
+                            and
+                            popularity in the top five European soccer leagues.</li>
+                        <li>Built Ordinary Least Squares regression models to assess the influence of different
+                            variables on
+                            wages.</li>
+                        <li>Implemented data visualization techniques to compare wage distributions and identity key
+                            salary
+                            determinants.</li>
+                    </ul>
+                </section>
+            </section>
+        </projects-section>
+
+    </main>
+    <br>
+    <footer>
+        <form action="https://httpbin.org/post" method="POST">
+            <h3>Contact Me</h3>
+            <fieldset>
+                <legend>Your Info.</legend>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" minlength="2" maxlength="50" placeholder="Joe Mama" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="joe@email.com" required>
+            </fieldset>
+
+            <label for="message">Comments:</label>
+            <textarea id="message" name="message" minlength="10" maxlength="300" placeholder="Leave me a message!"
+                pattern="^[a-zA-Z0-9\s.,!?'-]+$" required></textarea>
+
+            <input type="hidden" name="possible_bot" value="true">
+
+            <output id="error-message"></output>
+            <output id="info-message"></output>
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <p>&copy; 2025 Timothy Lam</p>
+    </footer>
+</body>
+
+</html>
