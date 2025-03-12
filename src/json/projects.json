@@ -1,0 +1,26 @@
+[
+    {
+        "title": "CodeLog",
+        "date": "2024",
+        "language": "HTML CSS JS",
+        "image": "src/img/CodeLog.png",
+        "description": "A portfolio web app for coders and recruiters.",
+        "link": "https://timothy0727.github.io/Codelog/home_projects_page.html"
+    },
+    {
+        "title": "TSwift Search Engine",
+        "date": "2023",
+        "language": "Python",
+        "image": "",
+        "description": "A search engine for Taylor Swift’s songs using Python Numpy and BabyPandas.",
+        "link": "#"
+    },
+    {
+        "title": "Goals & Gold: The Impact of Fame on Striker Salaries",
+        "date": "2024",
+        "language": "Python",
+        "image": "",
+        "description": "Statistical analysis on the relationship between striker salaries, performance, and popularity.",
+        "link": "https://github.com/COGS108/Group015-FA24.git"
+    }
+]
