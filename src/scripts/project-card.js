@@ -83,6 +83,7 @@ class ProjectCard extends HTMLElement {
 
 customElements.define('project-card', ProjectCard);
 
+// fetch data from projects.json and populate project cards
 document.addEventListener("DOMContentLoaded", () => {
     fetch('src/json/projects.json')
         .then(response => response.json())
