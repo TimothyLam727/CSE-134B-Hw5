@@ -59,8 +59,18 @@ class ProjectCard extends HTMLElement {
         this.shadowRoot.append(this.styleElement, this.card);
     }
 
+    static get observedAttributes() {
+        return ['title', 'date', 'language', 'image', 'description', 'link'];
+    }
+
     connectedCallback() {
         this.render(); // Now attributes are available
+    }
+
+    attributeChangedCallback(name, oldValue, newValue) {
+        if (oldValue !== newValue) {
+            this.render();
+        }
     }
 
     render() {
@@ -78,6 +88,13 @@ class ProjectCard extends HTMLElement {
             <p id="description">${description}</p>
             <a href="${link}" target="_blank">More Info</a>
         `;
+    }
+
+    setProjectData(project) {
+        Object.keys(project).forEach(attr => {
+            this.setAttribute(attr, project[attr]);
+        });
+        this.render(); // Call render() directly to update the UI
     }
 }
 
@@ -114,4 +131,80 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         })
         .catch(error => console.error('Error loading project data:', error));
-})
+});
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const localButton = document.getElementById('load-local');
+    const remoteButton = document.getElementById('load-remote');
+    const addProjectButton = document.getElementById('add-project'); // Button to manually add a project
+    const projectsContainer = document.getElementById('projects');
+
+    if (!projectsContainer) {
+        console.error("Error: #projects element not found.");
+        return;
+    }
+
+    // JSONBin API Setup (Replace with your actual Bin ID)
+    const JSON_BIN_URL = "https://api.jsonbin.io/v3/b/67d122b78561e97a50ea5abc"; 
+    const JSON_BIN_API_KEY = "$2a$10$mM/.ab43yXi2hGi/tkCIUe8WIXKnASwxlLl57IrvDipmDRL34KLyi"; 
+
+    // Function to create a new project-card using render()
+    function addProjectCard(project) {
+        const projectCard = document.createElement('project-card');
+        projectCard.setProjectData(project); // Directly uses render()
+        projectsContainer.appendChild(projectCard);
+    }
+
+    // Dummy Data for LocalStorage
+    const localProjects = [
+        {
+            "title": "Local Project 1",
+            "date": "2024",
+            "language": "JavaScript",
+            "image": "local1.jpg",
+            "description": "This project is loaded from localStorage.",
+            "link": "https://example.com/local1"
+        },
+        {
+            "title": "Local Project 2",
+            "date": "2023",
+            "language": "Python",
+            "image": "local2.jpg",
+            "description": "Another localStorage project.",
+            "link": "https://example.com/local2"
+        }
+    ];
+
+    // Load LocalStorage Data
+    localButton.addEventListener("click", () => {
+        console.log("Loading local projects...");
+
+        if (!localStorage.getItem("projects")) {
+            localStorage.setItem("projects", JSON.stringify(localProjects));
+        }
+
+        const savedProjects = JSON.parse(localStorage.getItem("projects"));
+        projectsContainer.innerHTML = ''; // Clear before adding new cards
+        savedProjects.forEach(addProjectCard); // Use the new function
+    });
+
+    // Load Remote Data from JSONBin
+    remoteButton.addEventListener("click", () => {
+        console.log("Fetching remote projects from JSONBin...");
+
+        fetch(JSON_BIN_URL, {
+            method: "GET",
+            headers: {
+                "X-Master-Key": JSON_BIN_API_KEY,
+                "Content-Type": "application/json"
+            }
+        })
+        .then(response => response.json())
+        .then(data => {
+            projectsContainer.innerHTML = ''; // Clear before adding new cards
+            data.record.forEach(addProjectCard); // Use the new function
+        })
+        .catch(error => console.error('Error fetching remote data:', error));
+    });
+});
