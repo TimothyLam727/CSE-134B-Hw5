@@ -10,6 +10,7 @@
 body {
     font-family: Georgia, 'Times New Roman', Times, serif;
     background: linear-gradient(to bottom, rgb(240, 240, 240), rgb(243, 211, 107));
+    color: rgb(0, 0, 0);
 }
 
 @media (max-width: 480px) {
@@ -390,6 +391,10 @@ h2 {
 
 a i {
     color: black;
+}
+
+form h3 {
+    font-size: 1.5 rem;
 }
 
 form {

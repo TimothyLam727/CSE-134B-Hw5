@@ -11,7 +11,7 @@
     <style>
         :root {
             --background-light: linear-gradient(to bottom, rgb(240, 240, 240), rgb(243, 211, 107));
-            --background-dark: linear-gradient(to bottom, rgb(210, 172, 234), rgb(74, 29, 89));
+            --background-dark: linear-gradient(to bottom, rgb(210, 172, 234), rgb(122, 48, 147));
         }
     </style>
     <script>
@@ -62,6 +62,11 @@
                 localStorage.setItem("theme", theme);
                 document.body.style.background = theme === "dark" ? "var(--background-dark)" : "var(--background-light)";
                 themeToggle.textContent = theme === "dark" ? "🌞" : "🌙";
+
+                const form = document.querySelector("form");
+                if (form) {
+                    form.style.color = theme === "dark" ? "white" : "black";
+                }
             }
             themeToggle.addEventListener("click", () => {
                 const currentTheme = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
