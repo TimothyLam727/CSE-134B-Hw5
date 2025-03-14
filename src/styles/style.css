@@ -394,7 +394,7 @@ a i {
 }
 
 form h3 {
-    font-size: 1.5 rem;
+    font-size: 30px;
 }
 
 form {
@@ -463,18 +463,26 @@ form textarea {
 }
 
 form button {
+    font-size: 20px;
     color: black;
     border-radius: 5px;
-    width: 5vw;
-    height: 5vh;
+    width: 6rem;
+    height: 3rem;
+    background-color: #e7dede;
     border: none;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: transform 0.5s ease-in-out;
 }
 
 form button:hover {
-    background-color: #646c74;
     transform: scale(125%);
+    transition: transform 0.5s ease-in-out;
+}
+
+@media (max-width: 768px) {
+    form button {
+        width: 5rem;
+    }
 }
 
 #error-message, #info-message {
