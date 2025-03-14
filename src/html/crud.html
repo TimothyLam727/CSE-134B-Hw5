@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Manager</title>
+    <!-- <link rel="stylesheet" href="../styles/crud.css"> -->
+    <script src="../scripts/project-card.js" defer></script>
+    <script src="../scripts/crud.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Manage Projects (CRUD Actions)</h1>
+        <a href="../../index.html">Back to Home</a>
+    </header>
+
+    <main>
+        <section>
+            <h2>Add / Edit Project</h2>
+            <form id="project-form" style="display: flex; flex-direction: column;">
+                <input type="hidden" id="edit-index">
+                <label for="title">Project Name:</label>
+                <input type="text" id="title" required>
+
+                <label for="date">Date:</label>
+                <input type="text" id="date" required>
+
+                <label for="language">Programming Language:</label>
+                <input type="text" id="language" required>
+
+                <label for="image">Image URL:</label>
+                <input type="text" id="image">
+
+                <label for="description">Description:</label>
+                <textarea id="description" required></textarea>
+
+                <label for="link">Project Link:</label>
+                <input type="url" id="link" required>
+
+                <button type="submit">Save Project</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Project List</h2>
+            <div id="projects-container"></div>
+        </section>
+    </main>
+</body>
+
+</html>
